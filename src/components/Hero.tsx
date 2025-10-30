@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -19,35 +20,38 @@ const Hero = () => {
 
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
           <span className="bg-gradient-hero bg-clip-text text-transparent">
-            English Movies को
+            Transform English Movies
           </span>
           <br />
-          <span className="text-foreground">Hindi में Convert करें</span>
+          <span className="text-foreground">Into Hindi Instantly</span>
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          Advanced AI technology के साथ lip-sync और emotions preserve करते हुए
-          professional quality dubbing बनाएं
+          Create professional quality dubbing with advanced AI technology that preserves lip-sync and emotions perfectly
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-          <Button 
-            size="lg" 
-            className="group relative overflow-hidden bg-gradient-hero hover:shadow-glow-purple transition-all duration-300 text-lg px-8 py-6"
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              Start Dubbing
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </Button>
+          <Link to="/upload">
+            <Button 
+              size="lg" 
+              className="group relative overflow-hidden bg-gradient-hero hover:shadow-glow-purple transition-all duration-300 text-lg px-8 py-6"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Start Dubbing
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Button>
+          </Link>
           
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-primary/50 hover:bg-primary/10 hover:border-primary text-lg px-8 py-6"
-          >
-            देखें कैसे काम करता है
-          </Button>
+          <Link to="/how-it-works">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-primary/50 hover:bg-primary/10 hover:border-primary text-lg px-8 py-6"
+            >
+              See How It Works
+            </Button>
+          </Link>
         </div>
 
         <div className="pt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">

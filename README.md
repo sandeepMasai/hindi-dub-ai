@@ -20,24 +20,27 @@
 - **Vite** - Fast build tool
 - **shadcn/ui** - Beautiful component library
 
-### Backend (To be implemented)
+### Backend
 - **Node.js** - Server-side runtime
 - **Express** - Web framework
-- **Supabase** - Database & authentication
-- **Edge Functions** - Serverless computing
+- **MongoDB** - Database
+- **JWT** - Authentication
 
-### AI Services (To be integrated)
+### AI Services
 - **OpenAI Whisper** - Speech-to-text transcription
-- **GPT-4** - Context-aware translation
-- **ElevenLabs** - Natural voice synthesis
-- **Wav2Lip** - Lip-sync generation
+- **Google Translate** - Translation service
+- **ElevenLabs** - Natural voice synthesis ✅
+- **Wav2Lip** - Lip-sync generation ✅
 
 ## 📋 Prerequisites
 
 - Node.js 18+ और npm installed
-- Git for version control
-- OpenAI API key
-- ElevenLabs API key (optional)
+- MongoDB (local or Atlas)
+- FFmpeg installed
+- OpenAI API key (optional)
+- Google Translate API key (optional)
+- ElevenLabs API key (configured)
+- Wav2Lip API key (configured)
 
 ## 🛠️ Installation & Development
 
@@ -45,7 +48,7 @@
 
 ```bash
 git clone <your-repo-url>
-cd dubai-platform
+cd hindi-dub-ai
 ```
 
 ### Step 2: Install Dependencies
@@ -56,27 +59,45 @@ npm install
 
 ### Step 3: Set Up Environment Variables
 
-Create a `.env` file:
+Create `backend/.env` file:
 
 ```env
-# Supabase (Will be auto-configured with Lovable Cloud)
-VITE_SUPABASE_URL=your-supabase-url
-VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
+# MongoDB
+MONGODB_URI=your-mongodb-connection-string
 
-# OpenAI (For transcription & translation)
+# JWT
+JWT_SECRET=your-secret-key
+
+# Server
+PORT=6000
+NODE_ENV=development
+
+# AI APIs
+ELEVENLABS_API_KEY=sk_909dce2aa52a5d2b106122e74332dcf7e79bf3346e48afd3
+WAV2LIP_API_KEY=sk-Kc5-RxKFRtqJ8krsHMIPKw.Qoqz4SbQRSze-3gjsN8X_FPtlRbboEaw
 OPENAI_API_KEY=your-openai-key
+GOOGLE_TRANSLATE_API_KEY=your-google-key
 
-# ElevenLabs (For voice synthesis)
-ELEVENLABS_API_KEY=your-elevenlabs-key
+# Frontend URL
+FRONTEND_URL=http://localhost:8080
 ```
 
-### Step 4: Start Development Server
+### Step 4: Start Development Servers
 
 ```bash
+# Option 1: Automatic (recommended)
+./start.sh
+
+# Option 2: Manual
+# Terminal 1 - Backend
+cd backend && npm run dev
+
+# Terminal 2 - Frontend
 npm run dev
 ```
 
-App will run at `http://localhost:8080`
+- Frontend: `http://localhost:8080`
+- Backend: `http://localhost:6000`
 
 ## 🏗️ Project Structure
 

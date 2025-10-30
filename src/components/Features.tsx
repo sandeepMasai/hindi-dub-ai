@@ -4,32 +4,32 @@ const features = [
   {
     icon: Brain,
     title: "AI-Powered Translation",
-    description: "Advanced neural networks context और emotions को समझकर accurate translation देते हैं",
+    description: "Advanced neural networks understand context and emotions to deliver accurate translations",
   },
   {
     icon: Mic,
     title: "Natural Voice Cloning",
-    description: "Original actors की voice quality और tone को preserve करते हुए Hindi में convert करें",
+    description: "Convert to Hindi while preserving the original actors' voice quality and tone",
   },
   {
     icon: Video,
     title: "Perfect Lip-Sync",
-    description: "Video के साथ perfectly synchronized lip movements के लिए advanced AI technology",
+    description: "Advanced AI technology for perfectly synchronized lip movements with video",
   },
   {
     icon: Languages,
     title: "Multi-Language Support",
-    description: "English से Hindi के अलावा multiple Indian languages में dubbing support",
+    description: "Support for dubbing in multiple Indian languages beyond English to Hindi",
   },
   {
     icon: Zap,
     title: "Lightning Fast",
-    description: "Minutes में complete movie dubbing - traditional methods से 10x faster",
+    description: "Complete movie dubbing in minutes - 10x faster than traditional methods",
   },
   {
     icon: Shield,
     title: "Studio Quality",
-    description: "Professional-grade audio processing और quality control for theatrical releases",
+    description: "Professional-grade audio processing and quality control for theatrical releases",
   },
 ];
 
@@ -42,7 +42,7 @@ const Features = () => {
             <span className="bg-gradient-hero bg-clip-text text-transparent">Powerful Features</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Industry-leading AI technology से powered complete dubbing solution
+            Complete dubbing solution powered by industry-leading AI technology
           </p>
         </div>
 

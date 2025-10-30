@@ -3,26 +3,26 @@ import { Upload, Settings, Sparkles, Download } from "lucide-react";
 const steps = [
   {
     icon: Upload,
-    title: "Video Upload करें",
-    description: "अपनी English movie या video file upload करें - सभी popular formats supported हैं",
+    title: "Upload Video",
+    description: "Upload your English movie or video file - all popular formats are supported",
     step: "01",
   },
   {
     icon: Settings,
-    title: "Settings Select करें",
-    description: "Voice type, emotion level, और lip-sync preferences customize करें",
+    title: "Select Settings",
+    description: "Customize voice type, emotion level, and lip-sync preferences",
     step: "02",
   },
   {
     icon: Sparkles,
     title: "AI Processing",
-    description: "हमारा AI audio को analyze करके Hindi में convert करेगा with perfect lip-sync",
+    description: "Our AI analyzes the audio and converts it to Hindi with perfect lip-sync",
     step: "03",
   },
   {
     icon: Download,
-    title: "Download करें",
-    description: "Professional quality dubbed video download करें - ready for distribution",
+    title: "Download",
+    description: "Download your professional quality dubbed video - ready for distribution",
     step: "04",
   },
 ];
@@ -33,10 +33,10 @@ const HowItWorks = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold">
-            कैसे काम करता है?
+            How It Works?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            4 simple steps में professional dubbing ready
+            Professional dubbing ready in 4 simple steps
           </p>
         </div>
 
