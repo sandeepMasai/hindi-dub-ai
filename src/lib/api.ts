@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:6000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://hindi-dub-ai.onrender.com/api';
 
 interface SignupData {
   name: string;

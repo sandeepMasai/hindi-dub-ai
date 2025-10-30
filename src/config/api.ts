@@ -1,6 +1,6 @@
 // API Configuration
 export const API_CONFIG = {
-  BASE_URL: import.meta.env.VITE_API_URL || 'http://localhost:6000/api',
+  BASE_URL: import.meta.env.VITE_API_URL || 'https://hindi-dub-ai.onrender.com/api',
   TIMEOUT: 30000, // 30 seconds
   MAX_FILE_SIZE: 100 * 1024 * 1024, // 100MB
 };
