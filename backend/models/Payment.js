@@ -34,7 +34,7 @@ const paymentSchema = new mongoose.Schema({
   },
   transactionId: {
     type: String,
-    unique: true,
+    unique: true, // already creates index automatically
   },
   personalDetails: {
     fullName: String,
@@ -47,11 +47,8 @@ const paymentSchema = new mongoose.Schema({
     country: String,
   },
   paymentDetails: {
-    // For card payments (stored securely - in production use payment gateway)
     cardLastFour: String,
     cardBrand: String,
-    
-    // For UPI payments
     upiId: String,
   },
   errorMessage: String,
@@ -59,9 +56,8 @@ const paymentSchema = new mongoose.Schema({
   timestamps: true,
 });
 
-// Index for faster queries
+// ✅ Keep only these useful indexes
 paymentSchema.index({ user: 1, createdAt: -1 });
-paymentSchema.index({ transactionId: 1 });
 paymentSchema.index({ paymentStatus: 1 });
 
 module.exports = mongoose.model('Payment', paymentSchema);
